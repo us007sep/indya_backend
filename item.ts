@@ -3,18 +3,23 @@ import { Field, ObjectType } from "type-graphql";
 
 @ObjectType()
 @Entity()
-export class indya_database extends BaseEntity{
+export class item extends BaseEntity{
     @Field(()=>String)
     @Column()
     name:string;
+    @Field(()=>String)
     @Column()
     description:string;
+    @Field(()=>String)
     @PrimaryGeneratedColumn()
     id:string;
+    @Field(()=>Number)
     @Column()
     price:number;
+    @Field(()=>String)
     @Column()
     featured_image:string;
+    @Field(()=>String)
     @Column()
     category:string;
 }

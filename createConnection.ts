@@ -1,12 +1,12 @@
 import * as dotenv from 'dotenv';
 import { createConnection } from 'typeorm';
-import { indya_database } from './indya_database';
+import { item } from './item';
 
 dotenv.config();
 
 createConnection({
     url : process.env.DATABASE,
-    entities: [indya_database],
+    entities: [item],
     type: "postgres",
     extra:{
         ssl:{

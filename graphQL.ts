@@ -21,7 +21,7 @@ async function main(){
     appoloServer.applyMiddleware({app});
     app.use(cors());    //Connecting the firebase and heroku
     app.use(routers.routes()).use(routers.allowedMethods());
-
+    app.use(cors());
     app.listen(process.env.PORT || 3010 , () => console.log("Hello from KOA Server"));
 }
 

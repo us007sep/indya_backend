@@ -5,7 +5,7 @@ import { item } from './item';
 dotenv.config();
 
 createConnection({
-    url : process.env.DATABASE,
+    url : process.env.DATABASE_URL,
     entities: [item],
     type: "postgres",
     extra:{

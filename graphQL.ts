@@ -6,12 +6,13 @@ import { graphqlHTTP } from "koa-graphql";
 import "./createConnection";
 import * as cors from "@koa/cors"
 import ItemResolver from "./ItemResolver";
+import UserResolver from "./UserResolver";
 
 async function main(){
     const app = new koa();
 
     const resolvers =await buildSchema({
-        resolvers: [ItemResolver]
+        resolvers: [ItemResolver,UserResolver]
     });
 
     const appoloServer = new ApolloServer({schema:resolvers});

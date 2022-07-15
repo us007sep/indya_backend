@@ -1,16 +1,18 @@
 import * as dotenv from 'dotenv';
 import { createConnection } from 'typeorm';
 import { item } from './item';
+import user  from './user';
 
 dotenv.config();
 
 createConnection({
     url : process.env.DATABASE_URL,
-    entities: [item],
+    entities: [item,user],
     type: "postgres",
     extra:{
         ssl:{
             rejectUnauthorized:false,
         }
-    }
+    },
+    
 })

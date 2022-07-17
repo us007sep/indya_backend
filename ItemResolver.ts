@@ -1,4 +1,4 @@
-import { Query, Resolver } from "type-graphql";
+import { Args, Mutation, Query, Resolver } from "type-graphql";
 import { item } from "./item";
 
 @Resolver()

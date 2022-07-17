@@ -18,8 +18,23 @@ export class item extends BaseEntity{
     price:number;
     @Field(()=>String)
     @Column()
-    featured_image:string;
+    featured_image1:string;
+    @Field(()=>String)
+    @Column()
+    featured_image2:string;
+    @Field(()=>String)
+    @Column()
+    featured_image3:string;
+    @Field(()=>String)
+    @Column()
+    featured_image4:string;
     @Field(()=>String)
     @Column()
     category:string;
+    @Field(()=>Number)
+    @Column()
+    home:number;
+    @Field(()=>Number)
+    @Column()
+    new:number;
 }
